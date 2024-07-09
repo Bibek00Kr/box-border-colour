@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        .container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            border: 2px solid rgb(0, 0, 0);
+            /* width: 100px;
+            height: 100px; */
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Box,Border & Colour</h1>
+    <hr>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    <p>width:<input id="box-width" type="text" style="max-width: 40px;">px</p>
+    <p>height:<input id="box-height" type="text" style="max-width: 40px;">px</p>
+    <hr>
+    <h1>Border Radius</h1>
+    <p>Input For Border Radius:<input id="border" type="text"></p>
+    <h1>Background-color</h1>
+    <p>Input For Color:<input id="color" type="text"></p>
+
+    <script>
+        let box = document.querySelector(".box");
+        let widthInput = document.getElementById("box-width");
+        let heightInput = document.getElementById("box-height");
+        let borderInput = document.getElementById("border");
+        let colorInput = document.getElementById("color");
+
+        widthInput.addEventListener("input", () => {
+            box.style.width = widthInput.value + "px";
+        });
+
+        heightInput.addEventListener("input", () => {
+            box.style.height = heightInput.value + "px";
+        });
+
+        borderInput.addEventListener("input", () => {
+            box.style.borderRadius = borderInput.value;
+        });
+
+        colorInput.addEventListener("input", () => {
+            box.style.backgroundColor = colorInput.value;
+        });
+    </script>
+</body>
+
+</html>
