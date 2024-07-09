@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +14,22 @@
 
         .box {
             border: 2px solid rgb(0, 0, 0);
-            /* width: 100px;
-            height: 100px; */
             transition: all 0.5s ease;
+        }
+        .last{
+            padding-top: 80px;
+            text-align: center;
+        }
+        .last a{
+
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 4px;
+            border-radius: 50px;
         }
     </style>
 </head>
-
 <body>
     <h1>Box,Border & Colour</h1>
     <hr>
@@ -35,7 +43,7 @@
     <p>Border Radius:<input id="border" type="text" style="max-width: 50px;">; &nbsp;//(use: px, %)</p>
     <h1>Background-color</h1>
     <p>Color:<input id="color" type="text" style="max-width: 50px;">;</p>
-
+    <p class="last">Rate this Project <a href="https://github.com/Bibek00Kr/box-border-colour">GitHub</a></p>
     <script>
         let box = document.querySelector(".box");
         let widthInput = document.getElementById("box-width");
@@ -60,5 +68,4 @@
         });
     </script>
 </body>
-
 </html>
